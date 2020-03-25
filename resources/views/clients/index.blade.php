@@ -40,7 +40,7 @@
             <td>{{$client->name}}</td>
             <td>{{$client->card}}</td>
             <td>{{$client->status}}</td>
-        <td><input type="checkbox" name="aditionalCard" {{ ( count($client->aditionalCards) > 0) ? 'checked' : '' }} disabled/></td>
+        <td><input type="checkbox" name="aditionalCard" {{ ( count($client->cards) > 0) ? 'checked' : '' }} disabled/></td>
             <td>
                 <a href="{{ route('clients.edit',$client->id)}}" class="btn btn-primary btn-sm fa fa-pencil-square-o"></a>
             </td>

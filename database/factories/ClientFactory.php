@@ -13,8 +13,8 @@ $factory->define(Client::class, function (Faker $faker) {
         'email' => $faker->unique()->safeEmail,
         'sex' => $faker->randomElement($array = array ('M', 'F')),
         'flotilla' => $faker->boolean(),
-        'RFC' => Str::random(8),
-        'card' => Str::random(13),
+        'RFC' => $faker->regexify('[A-Z]{4}[0-9]{6}[A-Z0-9]{3}'),
+        'card' => $faker->regexify('[0-9]{13}'),
         'status' => $faker->randomElement($array = array ('A', 'I', 'S'))
     ];
 });

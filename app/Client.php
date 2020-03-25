@@ -8,7 +8,7 @@ class Client extends Model
 {
     protected $fillable = ['name', 'phone', 'email', 'sex', 'flotilla', 'RFC', 'card', 'status'];
 
-    public function aditionalCards()
+    public function cards()
     {
         return $this->hasMany('App\Card');
     }

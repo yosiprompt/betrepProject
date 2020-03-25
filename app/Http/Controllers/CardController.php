@@ -26,7 +26,7 @@ class CardController extends Controller
     public function create($id)
     {
         $client = Client::findOrFail($id);
-        $cards = $client->aditionalCards;
+        $cards = $client->cards;
 
         return view('cards.create', compact('client', 'cards'));
     }
